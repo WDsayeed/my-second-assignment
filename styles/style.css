@@ -9,17 +9,22 @@
     font-family: 'Work Sans', sans-serif;
 }
 
+.container {
+    width: 1440px;
+    margin: 0 auto;
+}
+
 /* header style */
 header {
     background: rgba(255, 144, 14, 0.1);
     width: 100%;
-    height: 130vh;
+    padding-bottom: 45px;
 }
 
 .nav-container {
     display: flex;
     padding: 50px 0;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -49,7 +54,7 @@ header {
 
 .brand-title {
     font-weight: 700;
-    font-size: 50px;
+    font-size: 3rem;
     color: #000;
 }
 
@@ -74,7 +79,13 @@ header {
 
 .banner-img {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 80px;
+
+}
+
+.banner-img img {
+    width: 100%;
+    object-fit: cover;
 }
 
 /* feature style */
@@ -135,10 +146,6 @@ header {
     margin-top: 100px;
 }
 
-.features-advantages {
-    margin-left: 200px;
-}
-
 .features-advantages-item {
     width: 586px;
     height: 171px;
@@ -153,10 +160,15 @@ header {
     margin-left: 90px;
 }
 
+.features-advantages-img img {
+    width: 100%;
+    object-fit: cover;
+}
+
 .experience-btn {
     position: relative;
-    top: -3%;
-    left: -80%;
+    top: -11%;
+    left: -8%;
     width: 260px;
     height: 150px;
     padding: 20px;
@@ -167,8 +179,6 @@ header {
     background: #FF900E;
     border-radius: 8px;
     border: none;
-
-
 }
 
 .experience-btn p {
@@ -176,20 +186,23 @@ header {
     font-size: 25px;
     line-height: 40px;
 }
+
 /* service section style */
-.our-service-container{
+.our-service-container {
     margin: 100px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 300px;
 }
-.our-services h3{
+
+.our-services h3 {
     text-align: center;
     margin-bottom: 20px;
-    
+
 }
-.our-services ul li{
+
+.our-services ul li {
     list-style: none;
     text-align: center;
     line-height: 150%;
@@ -197,18 +210,19 @@ header {
     font-size: 25px;
     color: #131313;
 }
-.service-section-img{
-}
+
+
 /* fact section style */
 
-.fact-info {
-    margin-left: 240px;
+.fact-info h3,
+.our-services h3 {
+    font-weight: 700;
+    font-size: 45px;
+    color: #131313;
 }
 
-.fact-info h3,.our-services h3 {
-    font-weight: 700;
-    font-size: 35px;
-    color: #131313;
+.serv-span {
+    color: #FF900E;
 }
 
 .fact-item-container {
@@ -226,17 +240,17 @@ header {
     font-size: 25px;
     color: #424242;
     text-align: center;
-    border: 1px solid #FF900E ;
+    border: 1px solid #FF900E;
     border-radius: 8px;
     padding: 50px 0;
-    transition: transform .2s;
+    transition: 0.2s;
 }
 
 .fact-item:hover {
-    width: 200px;
-    height: 200px;
-    border: 1px solid #228abb;
+    border: 2px solid rgba(235, 47, 156, 0.901);
     transform: scale(1.2);
+    color: rgba(235, 47, 156, 0.901);
+    background-color: rgb(49, 238, 238);
 }
 
 .fact-item img {
@@ -249,33 +263,142 @@ header {
     font-size: 15px;
     color: #727272;
 }
+
 /* sponsor section style */
 
-.sponsor-info h3{
+.sponsor-info h3 {
     margin-top: 100px;
     font-weight: 700;
-font-size: 35px;
-color: #131313;
-text-align: center;
-line-height: 200%;
+    font-size: 35px;
+    color: #131313;
+    text-align: center;
+    line-height: 200%;
 }
-.sponsor-info p{
+
+.sponsor-info p {
     text-align: center;
     color: #727272;
     line-height: 150%;
 }
-.sponsor-list-container{
+
+.sponsor-list-container {
     margin-top: 60px;
     display: flex;
     justify-content: space-evenly;
 }
-footer{
-    background: #FFF4E7;
-border-radius: 8px;
-color: #424242;
-text-align: center;
-padding: 30px;
-width: 1440px;
-margin: 120px auto;
 
+footer {
+    background: #FFF4E7;
+    border-radius: 8px;
+    color: #424242;
+    text-align: center;
+    padding: 30px;
+    width: 100%;
+    margin: 120px auto;
+
+}
+
+/* responsive style for mobile */
+
+@media only screen and (max-width:576px) {
+
+    .nav-container,
+    .nav-menu ul,
+    .features-list-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .nav-title {
+        font-size: 1.5rem;
+    }
+
+    .brand-title {
+        font-size: 2rem;
+    }
+
+    .features-list-img {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+
+    .features-list-img img {
+        width: 100%;
+    }
+
+    .feature-list-info,
+    .features-info,
+    .our-services {
+        padding: 20px;
+    }
+
+    .features-info {
+        text-align: center;
+        margin-top: -325px;
+    }
+    .feature-list-info{
+        text-align: center;
+    }
+    .our-service-container {
+        flex-direction: column;
+        margin-top: 50px;
+        gap: 80px;
+    }
+
+    .service-img {
+        width: 100%;
+    }
+
+    .features-advantages-container {
+        flex-direction: column;
+    }
+
+    .features-advantages-img {
+        margin-left: 0;
+    }
+
+    .experience-btn {
+        position: static;
+        margin: 10px auto;
+        width: 222px;
+        height: 120px;
+        padding: 10px;
+        font-size: 29px;
+        display: block;
+        text-align: center;
+    }
+
+    .features-advantages {
+        margin-left: 0;
+    }
+
+    .features-advantages-item {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .fact-section {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .fact-item-container,
+    .sponsor-list-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sponsor-list-container {
+        height: 500px;
+
+    }
+
+    footer {
+        margin: 0;
+    }
 }
